@@ -1399,8 +1399,6 @@ function order(g, opts) {
       lastBest = 0;
       best = _.cloneDeep(layering);
       bestCC = cc;
-    } else if (cc === bestCC) {
-      best = _.cloneDeep(layering);
     }
   }
 
@@ -2827,7 +2825,7 @@ function intersectRect(rect, point) {
   var dy = point.y - y;
   var w = rect.width / 2;
   var h = rect.height / 2;
-
+  
   if (!dx && !dy) {
     throw new Error("Not possible to find intersection inside of the rectangle");
   }
